@@ -3,101 +3,53 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start max-w-2xl w-full">
         <Image
-          className="dark:invert"
+          className="dark:invert mb-4"
           src="/next.svg"
           alt="Next.js logo"
-          width={180}
-          height={38}
+          width={120}
+          height={30}
           priority
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        <h1 className="text-3xl sm:text-4xl font-bold mb-2 text-center sm:text-left">Hi, I'm a Full Stack Developer</h1>
+        <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 text-center sm:text-left">
+          I build robust, scalable, and user-friendly web applications from front-end to back-end. My main idea is to deliver seamless digital experiences using modern technologies.
+        </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        <section className="mb-8 w-full">
+          <h2 className="text-2xl font-semibold mb-4">Featured Projects</h2>
+          <div className="grid gap-6">
+            <div className="border rounded-lg p-4 bg-white/80 dark:bg-black/40 shadow">
+              <h3 className="text-xl font-bold mb-2">Sample Project: DevConnect</h3>
+              <p className="mb-2 text-gray-600 dark:text-gray-300">
+                A social platform for developers to connect, share projects, and collaborate. Built with Next.js, Node.js, and MongoDB.
+              </p>
+              <ul className="list-disc list-inside text-sm text-gray-500 dark:text-gray-400 mb-2">
+                <li>Authentication & real-time chat</li>
+                <li>Responsive UI with Tailwind CSS</li>
+                <li>RESTful API & server-side rendering</li>
+              </ul>
+              <a
+                href="#"
+                className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Project
+              </a>
+            </div>
+            {/* Add more projects here as needed */}
+          </div>
+        </section>
+
+        <section className="w-full">
+          <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+          <p className="text-gray-700 dark:text-gray-300">
+            Experienced in JavaScript, TypeScript, React, Node.js, and cloud platforms. Passionate about building products that make a difference.
+          </p>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
