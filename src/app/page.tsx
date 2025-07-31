@@ -5,11 +5,11 @@ export default function Home() {
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start max-w-2xl w-full">
         <Image
-          className="dark:invert mb-4"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={120}
-          height={30}
+          className="rounded-full mb-4 border-4 border-blue-200 shadow-lg"
+          src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=256&q=80"
+          alt="AI-generated developer portrait"
+          width={96}
+          height={96}
           priority
         />
         <h1 className="text-3xl sm:text-4xl font-bold mb-2 text-center sm:text-left">Hi, I'm a Full Stack Developer</h1>
@@ -20,24 +20,33 @@ export default function Home() {
         <section className="mb-8 w-full">
           <h2 className="text-2xl font-semibold mb-4">Featured Projects</h2>
           <div className="grid gap-6">
-            <div className="border rounded-lg p-4 bg-white/80 dark:bg-black/40 shadow">
-              <h3 className="text-xl font-bold mb-2">Sample Project: DevConnect</h3>
-              <p className="mb-2 text-gray-600 dark:text-gray-300">
-                A social platform for developers to connect, share projects, and collaborate. Built with Next.js, Node.js, and MongoDB.
-              </p>
-              <ul className="list-disc list-inside text-sm text-gray-500 dark:text-gray-400 mb-2">
-                <li>Authentication & real-time chat</li>
-                <li>Responsive UI with Tailwind CSS</li>
-                <li>RESTful API & server-side rendering</li>
-              </ul>
-              <a
-                href="#"
-                className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Project
-              </a>
+            <div className="border rounded-lg p-4 bg-white/80 dark:bg-black/40 shadow flex flex-col sm:flex-row gap-4 items-center">
+              <Image
+                className="rounded-lg w-28 h-28 object-cover"
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=256&q=80"
+                alt="AI-generated project illustration"
+                width={112}
+                height={112}
+              />
+              <div className="flex-1">
+                <h3 className="text-xl font-bold mb-2">Sample Project: DevConnect</h3>
+                <p className="mb-2 text-gray-600 dark:text-gray-300">
+                  A social platform for developers to connect, share projects, and collaborate. Built with Next.js, Node.js, and MongoDB.
+                </p>
+                <ul className="list-disc list-inside text-sm text-gray-500 dark:text-gray-400 mb-2">
+                  <li>Authentication & real-time chat</li>
+                  <li>Responsive UI with Tailwind CSS</li>
+                  <li>RESTful API & server-side rendering</li>
+                </ul>
+                <a
+                  href="#"
+                  className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
             </div>
             {/* Add more projects here as needed */}
           </div>
